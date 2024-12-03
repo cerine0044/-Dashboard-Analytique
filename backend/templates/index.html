@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Analytique</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <!-- Charger D3.js -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <!-- Charger Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Charger ton propre script JavaScript -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <h1>Dashboard Analytique</h1>
+
+    <div id="charts-container">
+        <!-- Conteneur pour les graphiques Chart.js -->
+        <div class="chart-container">
+            <h2>Graphique d'Âge des Utilisateurs</h2>
+            <canvas id="ageChart"></canvas>
+        </div>
+
+        <div class="chart-container">
+            <h2>Répartition par Genre</h2>
+            <canvas id="genderChart"></canvas>
+        </div>
+
+        <div class="chart-container">
+            <h2>Graphique d'Âge </h2>
+            <svg id="d3Chart"></svg>
+        </div>
+    </div>
+</body>
+</html>
